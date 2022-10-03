@@ -10,7 +10,6 @@ import React from 'react';
 import type {Node} from 'react';
 import {
   Alert,
-  Button,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -27,6 +26,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import {Button, Stack, TextInput} from '@react-native-material/core';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
@@ -81,6 +81,12 @@ const App: () => Node = () => {
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
           </Section>
+          <Stack fill center spacing={4}>
+            <Button title="Contained" />
+          </Stack>
+          <Stack>
+            <TextInput label="Label" style={{margin: 16}} />;
+          </Stack>
         </View>
       </ScrollView>
     </SafeAreaView>
